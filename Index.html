@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16a34a">
+  <title>Moo Mony - Earn & Win</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f0fdf4;
+      color: #16351f;
+    }
+    header {
+      text-align: center;
+      padding: 24px 10px;
+      background: #16a34a;
+      color: white;
+      border-radius: 18px;
+    }
+    h1 { margin-bottom: 8px; }
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 14px;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    .card {
+      background: white;
+      padding: 18px;
+      margin: 14px 0;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px #0001;
+    }
+    .card h2 { margin-top: 0; }
+    .tag {
+      color: #15803d;
+      font-weight: bold;
+    }
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 14px;
+      background: #16a34a;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #666;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐮 Moo Mony</h1>
+    <p>Discover ways to earn and win!</p>
+    <p>Explore opportunities available in Germany.</p>
+  </header><input id="searchInput" type="search"
+placeholder="Search opportunities...">
+
+  <main id="opportunityList">
+    <article class="card">
+      <h2>Paid Surveys</h2>
+      <p>Find websites offering paid surveys in Germany.</p>
+      <span class="tag">💰 Cash</span><br>
+      <a href="https://www.google.com/search?q=paid+surveys+Germany"
+         target="_blank" rel="noopener noreferrer">Explore</a>
+    </article><article class="card">
+  <h2>Free Giveaways</h2>
+  <p>Search for free competitions and prize draws.</p>
+  <span class="tag">🎁 Prizes</span><br>
+  <a href="https://www.google.com/search?q=free+giveaways+Germany"
+     target="_blank" rel="noopener noreferrer">Explore</a>
+</article>
+
+<article class="card">
+  <h2>Website Testing</h2>
+  <p>Look for opportunities to test websites for payment.</p>
+  <span class="tag">📱 Tasks</span><br>
+  <a href="https://www.google.com/search?q=paid+website+testing+Germany"
+     target="_blank" rel="noopener noreferrer">Explore</a>
+</article>
+
+  </main>  <footer>
+    <p>Always check the rules before joining an offer.</p>
+    <p>Earnings are not guaranteed. Never pay money to claim a prize.</p>
+    <p>© 2026 Moo Mony</p>
+  </footer>  <script>
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".card");
+
+    searchInput.addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+
+      cards.forEach(function (card) {
+        card.style.display = card.textContent
+          .toLowerCase().includes(query) ? "" : "none";
+      });
+    });
+  </script></body>
+</html>
